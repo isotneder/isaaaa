@@ -1,1 +1,55 @@
-# isaaaa
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İsa Yaşan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000;
+    margin: 0;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+}
+
+.name {
+    color: #fff;
+    font-size: 5rem;
+    position: relative;
+    display: inline-block;
+    animation: fadeInOut 4s infinite;
+    animation-delay: 1s;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
+</style>
+    <div class="container">
+        <h1 class="name">İsa Yaşan</h1>
+    </div>
+
+</body>
+</html>
