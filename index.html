@@ -27,15 +27,28 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-color: #121212;
+            background-color: #121212; /* Yedek renk, blur etkisi çalışmazsa görünür */
             font-family: Arial, sans-serif;
             color: #e0e0e0;
             margin: 0;
             overflow: hidden;
+            position: relative; /* Pseudo-elementler için gerekli */
+        }
+
+        /* Arka plan görüntüsü için pseudo-element */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background-image: url('https://i.hizliresim.com/b02lz2n.jpeg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
+            filter: blur(5px); /* Arka planı bulanıklaştırır */
+            z-index: -1; /* Diğer içeriklerin arkasına yerleştirir */
         }
 
         .container {
@@ -46,7 +59,8 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             max-width: 400px;
             width: 90%;
-            position: relative;
+            position: relative; /* z-index için */
+            z-index: 1; /* İçeriği arka planın önünde tutar */
         }
 
         .animated-text {
